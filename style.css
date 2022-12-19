@@ -1,0 +1,116 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    font-family: "joystick", Arial, sans-serif;
+  }
+  .container {
+    align-self: center;
+  }
+  div.row div {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 3px;
+  }
+  div.bricks {
+    background: teal;
+    background-size: cover;
+    border: solid 1px white;
+    box-shadow: 1px 1px whitesmoke;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  div.coins {
+    background: url("./images/coin.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+  }
+  div.cherry {
+    background: url("./images/cherry.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+  }
+  div.empty {
+    background-color: black;
+    background-position: center;
+    background-size: 20%;
+  }
+  div.score-container {
+    font-size: xx-large;
+    color: teal;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: "joystick", Arial, sans-serif;
+  }
+  div.title-container {
+    font-size: xx-large;
+    color: teal;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "joystick", Arial, sans-serif;
+    letter-spacing: 10px;
+  }
+
+  #start-button {
+    font-size: 30px;
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: min-content;
+    color: yellow;
+    background-color: black;
+    font-family: "joystick", Arial, sans-serif;
+    border: dashed 5px teal;
+    letter-spacing: 10px;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    animation-name: opacityOn;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+
+    animation-name: opacityOff;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes opacityOn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes opacityOff {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.yellow-death-animation {
+    -webkit-animation: 1.5s forwards steps(1, end) yellowDeath;
+            animation: 1.5s forwards steps(1, end) yellowDeath;
+  }
+
